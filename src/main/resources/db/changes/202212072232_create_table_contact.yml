@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_adress
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: CONTACT
+            columns:
+              - column:
+                  name: Contact_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: CONTACT_ID_PK
+                    nullable: false
+              - columns:
+                  name: Contact_phone
+                  type: varchar(20)
+              - columns:
+                  name: Contact_email
+                  type: varchar(50)
