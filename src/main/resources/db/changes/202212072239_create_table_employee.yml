@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_employee
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: EMPLOYEE
+            columns:
+              - column:
+                  name: Employee_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: EMPLOYEE_ID_PK
+                    nullable: false
+              - column:
+                  name: Employee_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Employee_surname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Employee_login
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Employee_password
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Employee_isactive
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Permission_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_permission_employee
+                    referencedTableName: PERMISSION
+                    referencedColumnNames: Permission_id
+              - column:
+                  name: Contact_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_contact_employee
+                    referencedTableName: CONTACT
+                    referencedColumnNames: Contact_id
+              - column:
+                  name: Adress_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_adress_employee
+                    referencedTableName: ADRESS
+                    referencedColumnNames: Adress_id

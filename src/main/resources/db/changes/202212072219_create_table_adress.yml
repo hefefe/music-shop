@@ -13,29 +13,29 @@ databaseChangeLog:
                     primaryKey: true
                     primarykeyname: ADRESS_ID_PK
                     nullable: false
-              - columns:
+              - column:
                   name: Adress_locality
                   type: varchar(50)
                   constraints:
                     nullable: false
-              - columns:
+              - column:
                   name: Adress_state
                   type: varchar(50)
                   constraints:
                     nullable: false
-              - columns:
+              - column:
                   name: Adress_zipcode
                   type: varchar(5)
                   constraints:
                     nullable: false
-              - columns:
+              - column:
                   name: Adress_street
                   type: varchar(50)
-              - columns:
+              - column:
                   name: Adress_number
                   type: varchar(10)
                   constraints:
                     nullable: false
-              - columns:
+              - column:
                   name: Adress_apartment_number
                   type: varchar(10)

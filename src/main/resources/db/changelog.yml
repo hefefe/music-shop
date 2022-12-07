@@ -11,3 +11,6 @@ databaseChangeLog:
   - include:
       file: changes/202212072232_create_table_contact.yml
       relativeToChangelogFile: true
+  - include:
+      file: changes/202212072239_create_table_employee.yml
+      relativeToChangelogFile: true

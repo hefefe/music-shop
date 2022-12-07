@@ -13,6 +13,6 @@ databaseChangeLog:
                     primaryKey: true
                     primarykeyname: PERMISSION_ID_PK
                     nullable: false
-              - columns:
+              - column:
                   name: Permission_name
                   type: varchar(50)

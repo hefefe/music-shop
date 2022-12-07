@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: create_table_adress
+      id: create_table_contact
       author: mwitczak
       changes:
         - createTable:
@@ -13,9 +13,9 @@ databaseChangeLog:
                     primaryKey: true
                     primarykeyname: CONTACT_ID_PK
                     nullable: false
-              - columns:
+              - column:
                   name: Contact_phone
                   type: varchar(20)
-              - columns:
+              - column:
                   name: Contact_email
                   type: varchar(50)
