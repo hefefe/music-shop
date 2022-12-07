@@ -5,3 +5,6 @@ databaseChangeLog:
   - include:
       file: changes/202212072150_create_table_permission.yml
       relativeToChangelogFile: true
+  - include:
+      file: changes/202212072219_create_table_adress.yml
+      relativeToChangelogFile: true

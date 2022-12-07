@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_adress
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: ADRESS
+            columns:
+              - column:
+                  name: Adress_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: ADRESS_ID_PK
+                    nullable: false
+              - columns:
+                  name: Adress_locality
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - columns:
+                  name: Adress_state
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - columns:
+                  name: Adress_zipcode
+                  type: varchar(5)
+                  constraints:
+                    nullable: false
+              - columns:
+                  name: Adress_street
+                  type: varchar(50)
+              - columns:
+                  name: Adress_number
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - columns:
+                  name: Adress_apartment_number
+                  type: varchar(10)
