@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_customer
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: CUSTOMER
+            columns:
+              - column:
+                  name: Customer_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: CUSTOMER_ID_PK
+                    nullable: false
+              - column:
+                  name: Customer_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Customer_surname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Customer_login
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Customer_password
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Customer_isactive
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Customer_nip
+                  type: varchar(10)
+              - column:
+                  name: Customer_type
+                  type: varchar(50)
+              - column:
+                  name: Contact_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_contact_customer
+                    referencedTableName: CONTACT
+                    referencedColumnNames: Contact_id
+              - column:
+                  name: Adress_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_adress_customer
+                    referencedTableName: ADRESS
+                    referencedColumnNames: Adress_id
