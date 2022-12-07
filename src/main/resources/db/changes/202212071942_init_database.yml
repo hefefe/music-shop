@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: init_tag
-      author: mWitczak
+      author: mwitczak
       changes:
         - tagDatabase:
             tag: init
