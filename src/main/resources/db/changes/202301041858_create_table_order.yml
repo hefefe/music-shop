@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_order
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: ORDER
+            columns:
+              - column:
+                  name: Order_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: ORDER_ID_PK
+                    nullable: false
+              - column:
+                  name: Order_date
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Employee_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_employee_order
+                    referencedTableName: EMPLOYEE
+                    referencedColumnNames: Employee_id
+              - column:
+                  name: Customer_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_customer_order
+                    referencedTableName: CUSTOMER
+                    referencedColumnNames: Customer_id
+              - column:
+                  name: Order_status_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_OrderStatusId_order
+                    referencedTableName: ORDER_STATUS
+                    referencedColumnNames: Order_status_id

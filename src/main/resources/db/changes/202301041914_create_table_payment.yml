@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_payment
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: PAYMENT
+            columns:
+              - column:
+                  name: Payment_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: PAYMENT_ID_PK
+                    nullable: false
+              - column:
+                  name: Order_date
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Payment_gross_price
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Payment_net_price
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Payment_is_paids
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Payment_bank_account_number
+                  type: varchar(50)
+              - column:
+                  name: Payment_tax
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Order_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_order_payment
+                    referencedTableName: ORDER
+                    referencedColumnNames: Order_id
+              - column:
+                  name: Payment_method_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_paymentMethod_payment
+                    referencedTableName: PAYMENT_METHOD
+                    referencedColumnNames: Payment_method_id

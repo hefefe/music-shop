@@ -1,0 +1,113 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_sequence_permission_id_seq
+      author: mwitczak
+      changes:
+        -  createSequence:
+             sequenceName: permission_id_seq
+             startValue: 1
+  - changeSet:
+      id: create_sequence_adress_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: adress_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_contact_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: contact_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_employee_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: employee_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_customer_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: customer_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_order_status_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: order_status_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_order_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: order_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_payment_method_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: payment_method_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_payment_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: payment_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_artist_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: artist_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_genre_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: genre_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_product_type_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: product_type_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_warehouse_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: warehouse_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_warehouse_state_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: warehouse_state_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_product_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: product_id_seq
+            startValue: 1
+  - changeSet:
+      id: create_sequence_order_elements_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: order_elements_id_seq
+            startValue: 1

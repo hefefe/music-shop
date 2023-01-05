@@ -17,3 +17,42 @@ databaseChangeLog:
   - include:
       file: changes/202212080004_create_table_customer.yml
       relativeToChangelogFile: true
+  - include:
+      file: changes/202301041819_create_table_order_status.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301041858_create_table_order.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301041913_create_table_payment_method.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301041914_create_table_payment.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301042024_create_table_artist.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301042025_create_table_genre.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301042030_create_table_product_type.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301042033_create_table_warehouse.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301042037_create_table_warehouse_state.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301051205_create_table_product.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301051217_create_table_order_elements.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301051233_create_sequences.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301051400_add_column_customer_permission.yml
+      relativeToChangelogFile: true

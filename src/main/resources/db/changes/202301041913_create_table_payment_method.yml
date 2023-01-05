@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_payment_method
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: PAYMENT_METHOD
+            columns:
+              - column:
+                  name: Payment_method_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: PAYMENT_METHOD_ID_PK
+                    nullable: false
+              - column:
+                  name: Payment_method_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false

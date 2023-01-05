@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_product_type
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: PRODUCT_TYPE
+            columns:
+              - column:
+                  name: Product_type_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: PRODUCT_TYPE_ID_PK
+                    nullable: false
+              - column:
+                  name: Product_type_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false

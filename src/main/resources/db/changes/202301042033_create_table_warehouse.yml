@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_warehouse
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: WAREHOUSE
+            columns:
+              - column:
+                  name: Warehouse_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: WAREHOUSE_ID_PK
+                    nullable: false
+              - column:
+                  name: Warehouse_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Adress_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_adress_warehouse
+                    referencedTableName: ADRESS
+                    referencedColumnNames: Adress_id

@@ -1,0 +1,67 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_product
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: PRODUCT
+            columns:
+              - column:
+                  name: Product_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: PRODUCT_ID_PK
+                    nullable: false
+              - column:
+                  name: Product_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Product_gross_price
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Product_net_price
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Product_tax
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Artist_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_artist_product
+                    referencedTableName: ARTIST
+                    referencedColumnNames: Artist_id
+              - column:
+                  name: Genre_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_genre_product
+                    referencedTableName: GENRE
+                    referencedColumnNames: Genre_id
+              - column:
+                  name: Product_type_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_productType_product
+                    referencedTableName: PRODUCT_TYPE
+                    referencedColumnNames: Product_type_id
+              - column:
+                  name: Warehouse_state_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_WarehouseState_product
+                    referencedTableName: WAREHOUSE_STATE
+                    referencedColumnNames: Warehouse_state_id

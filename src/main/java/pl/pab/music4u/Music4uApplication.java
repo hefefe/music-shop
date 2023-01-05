@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Music4uApplication {
-	//TEST
 	public static void main(String[] args) {
 		SpringApplication.run(Music4uApplication.class, args);
 	}

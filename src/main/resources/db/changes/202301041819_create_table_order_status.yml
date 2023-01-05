@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_order_status
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: ORDER_STATUS
+            columns:
+              - column:
+                  name: Order_status_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: ORDER_STATUS_ID_PK
+                    nullable: false
+              - column:
+                  name: Order_status_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false

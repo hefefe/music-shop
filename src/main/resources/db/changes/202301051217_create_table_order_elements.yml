@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_table_order_elements
+      author: mwitczak
+      changes:
+        - createTable:
+            tableName: ORDER_ELEMENTS
+            columns:
+              - column:
+                  name: Order_elements_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primarykeyname: ORDER_ELEMENTS_ID_PK
+                    nullable: false
+              - column:
+                  name: Order_item_amount
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Order_remark
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: order_discount
+                  type: decimal(100,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: Product_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_product_orderElements
+                    referencedTableName: PRODUCT
+                    referencedColumnNames: Product_id
+              - column:
+                  name: Order_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_order_orderElements
+                    referencedTableName: ORDER
+                    referencedColumnNames: Order_id
