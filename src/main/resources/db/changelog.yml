@@ -57,5 +57,29 @@ databaseChangeLog:
       file: changes/202301051400_add_column_customer_permission.yml
       relativeToChangelogFile: true
   - include:
-      file: changes/202301051832_add_test_permission.yml
+      file: changes/202301051832_insert_permissions.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301051953_add_image_column_to_product_table.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052031_insert_order_status.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052058_insert_artist.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052103_insert_genre.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052105_insert_product_type.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052117_insert_payment_method.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052126_insert_warehouse_adress.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301052131_insert_warehouse.yml
       relativeToChangelogFile: true

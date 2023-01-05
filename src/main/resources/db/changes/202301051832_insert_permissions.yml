@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_permissions
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: Permission_id
+                  valueSequenceNext: permission_id_seq
+              - column:
+                  name: Permission_name
+                  value: user
+            schemaName: public
+            tableName: PERMISSION
+        - insert:
+            columns:
+              - column:
+                  name: Permission_id
+                  valueSequenceNext: permission_id_seq
+              - column:
+                  name: Permission_name
+                  value: admin
+            schemaName: public
+            tableName: PERMISSION
+        - insert:
+            columns:
+              - column:
+                  name: Permission_id
+                  valueSequenceNext: permission_id_seq
+              - column:
+                  name: Permission_name
+                  value: processing
+            schemaName: public
+            tableName: PERMISSION
+        - insert:
+            columns:
+              - column:
+                  name: Permission_id
+                  valueSequenceNext: permission_id_seq
+              - column:
+                  name: Permission_name
+                  value: backup
+            schemaName: public
+            tableName: PERMISSION

@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_artist
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: Artist_id
+                  valueSequenceNext: artist_id_seq
+              - column:
+                  name: Artist_name
+                  value: queen
+            schemaName: public
+            tableName: ARTIST
+        - insert:
+            columns:
+              - column:
+                  name: Artist_id
+                  valueSequenceNext: artist_id_seq
+              - column:
+                  name: Artist_name
+                  value: ac/dc
+            schemaName: public
+            tableName: ARTIST
+        - insert:
+            columns:
+              - column:
+                  name: Artist_id
+                  valueSequenceNext: artist_id_seq
+              - column:
+                  name: Artist_name
+                  value: static-x
+            schemaName: public
+            tableName: ARTIST
+        - insert:
+            columns:
+              - column:
+                  name: Artist_id
+                  valueSequenceNext: artist_id_seq
+              - column:
+                  name: Artist_name
+                  value: abba
+            schemaName: public
+            tableName: ARTIST

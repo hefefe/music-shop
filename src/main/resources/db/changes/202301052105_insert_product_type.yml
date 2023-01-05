@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_product_type
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  Product_type_id
+                  valueSequenceNext:  product_type_id_seq
+              - column:
+                  name: Product_type_name
+                  value: cd
+            schemaName: public
+            tableName: PRODUCT_TYPE
+        - insert:
+            columns:
+              - column:
+                  name: Product_type_id
+                  valueSequenceNext: product_type_id_seq
+              - column:
+                  name: Product_type_name
+                  value: casette
+            schemaName: public
+            tableName: PRODUCT_TYPE
+        - insert:
+            columns:
+              - column:
+                  name: Product_type_id
+                  valueSequenceNext: product_type_id_seq
+              - column:
+                  name: Product_type_name
+                  value: vinyl
+            schemaName: public
+            tableName: PRODUCT_TYPE
+        - insert:
+            columns:
+              - column:
+                  name: Product_type_id
+                  valueSequenceNext: product_type_id_seq
+              - column:
+                  name: Product_type_name
+                  value: digital
+            schemaName: public
+            tableName: PRODUCT_TYPE

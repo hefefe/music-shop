@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_warehouse_adress
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  Adress_id
+                  valueSequenceNext: adress_id_seq
+              - column:
+                  name: Adress_locality
+                  value: Koszalin
+              - column:
+                  name: Adress_state
+                  value: Zachodniopomorskie
+              - column:
+                  name: Adress_zipcode
+                  value: 75432
+              - column:
+                  name: Adress_street
+                  value: 'Jana Pawła II'
+              - column:
+                  name: Adress_number
+                  value: 2137
+            schemaName: public
+            tableName: ADRESS

@@ -16,13 +16,9 @@ databaseChangeLog:
               - column:
                   name: Employee_name
                   type: varchar(50)
-                  constraints:
-                    nullable: false
               - column:
                   name: Employee_surname
                   type: varchar(50)
-                  constraints:
-                    nullable: false
               - column:
                   name: Employee_login
                   type: varchar(50)
@@ -50,7 +46,6 @@ databaseChangeLog:
                   name: Contact_id
                   type: bigint
                   constraints:
-                    nullable: false
                     foreignKeyName: fk_contact_employee
                     referencedTableName: CONTACT
                     referencedColumnNames: Contact_id
@@ -58,7 +53,6 @@ databaseChangeLog:
                   name: Adress_id
                   type: bigint
                   constraints:
-                    nullable: false
                     foreignKeyName: fk_adress_employee
                     referencedTableName: ADRESS
                     referencedColumnNames: Adress_id

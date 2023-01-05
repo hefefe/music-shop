@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_warehouse
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  Warehouse_id
+                  valueSequenceNext: warehouse_id_seq
+              - column:
+                  name: Warehouse_name
+                  value: 'Warehouse in koszalin'
+              - column:
+                  name: Adress_id
+                  value: 1
+            schemaName: public
+            tableName: WAREHOUSE

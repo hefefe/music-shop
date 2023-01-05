@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_image_column_to_product
+      author: mwitczak
+      changes:
+        - addColumn:
+            tableName: PRODUCT
+            columns:
+              - column:
+                  name: Product_image_path
+                  type: varchar(512)

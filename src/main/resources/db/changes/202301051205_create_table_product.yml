@@ -61,7 +61,6 @@ databaseChangeLog:
                   name: Warehouse_state_id
                   type: bigint
                   constraints:
-                    nullable: false
                     foreignKeyName: fk_WarehouseState_product
                     referencedTableName: WAREHOUSE_STATE
                     referencedColumnNames: Warehouse_state_id

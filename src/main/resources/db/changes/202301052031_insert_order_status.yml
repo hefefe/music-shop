@@ -1,0 +1,75 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_order_status
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: accepted
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: 'in realisation'
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: sent
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: recieved
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: completed
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: refunded
+            schemaName: public
+            tableName: ORDER_STATUS
+        - insert:
+            columns:
+              - column:
+                  name: Order_status_id
+                  valueSequenceNext: order_status_id_seq
+              - column:
+                  name: Order_status_name
+                  value: cancelled
+            schemaName: public
+            tableName: ORDER_STATUS
