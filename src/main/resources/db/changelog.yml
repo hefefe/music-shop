@@ -3,6 +3,9 @@ databaseChangeLog:
       file: changes/202212071942_init_database.yml
       relativeToChangelogFile: true
   - include:
+      file: changes/202212072005_create_sequences.yml
+      relativeToChangelogFile: true
+  - include:
       file: changes/202212072150_create_table_permission.yml
       relativeToChangelogFile: true
   - include:
@@ -51,8 +54,8 @@ databaseChangeLog:
       file: changes/202301051217_create_table_order_elements.yml
       relativeToChangelogFile: true
   - include:
-      file: changes/202301051233_create_sequences.yml
+      file: changes/202301051400_add_column_customer_permission.yml
       relativeToChangelogFile: true
   - include:
-      file: changes/202301051400_add_column_customer_permission.yml
+      file: changes/202301051832_add_test_permission.yml
       relativeToChangelogFile: true

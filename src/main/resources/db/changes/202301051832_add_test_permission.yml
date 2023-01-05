@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_sequence_permission_id_seq
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: Permission_id
+                  valueSequenceNext: permission_id_seq
+              - column:
+                  name: Permission_name
+                  value: test
+            schemaName: public
+            tableName: PERMISSION
