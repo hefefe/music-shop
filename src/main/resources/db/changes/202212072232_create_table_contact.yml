@@ -7,15 +7,15 @@ databaseChangeLog:
             tableName: CONTACT
             columns:
               - column:
-                  name: Contact_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: CONTACT_ID_PK
                     nullable: false
               - column:
-                  name: Contact_phone
+                  name: phone
                   type: varchar(20)
               - column:
-                  name: Contact_email
+                  name: email
                   type: varchar(50)

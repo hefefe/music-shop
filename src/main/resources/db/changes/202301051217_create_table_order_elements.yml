@@ -7,40 +7,40 @@ databaseChangeLog:
             tableName: ORDER_ELEMENTS
             columns:
               - column:
-                  name: Order_elements_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: ORDER_ELEMENTS_ID_PK
                     nullable: false
               - column:
-                  name: Order_item_amount
+                  name: item_amount
                   type: int
                   constraints:
                     nullable: false
               - column:
-                  name: Order_remark
-                  type: decimal(100,2)
+                  name: remark
+                  type: clob
                   constraints:
                     nullable: false
               - column:
-                  name: order_discount
-                  type: decimal(100,2)
+                  name: discount
+                  type: integer
                   constraints:
                     nullable: false
               - column:
-                  name: Product_id
+                  name: product_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_product_orderElements
+                    foreignKeyName: fk_product_order_elements
                     referencedTableName: PRODUCT
-                    referencedColumnNames: Product_id
+                    referencedColumnNames: id
               - column:
-                  name: Order_id
+                  name: order_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_order_orderElements
-                    referencedTableName: ORDER
-                    referencedColumnNames: Order_id
+                    foreignKeyName: fk_orders_order_elements
+                    referencedTableName: ORDERS
+                    referencedColumnNames: id

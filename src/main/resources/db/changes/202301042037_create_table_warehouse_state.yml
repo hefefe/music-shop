@@ -7,27 +7,27 @@ databaseChangeLog:
             tableName: WAREHOUSE_STATE
             columns:
               - column:
-                  name: Warehouse_state_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: WAREHOUSE_STATE_ID_PK
                     nullable: false
               - column:
-                  name: Warehouse_state_amount
+                  name: amount
                   type: int
                   constraints:
                     nullable: false
               - column:
-                  name: Warehouse_state_status
+                  name: status
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: Warehouse_id
+                  name: warehouse_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_warehouse_warehouseState
+                    foreignKeyName: fk_warehouse_warehouse_state
                     referencedTableName: WAREHOUSE
-                    referencedColumnNames: Warehouse_id
+                    referencedColumnNames: id

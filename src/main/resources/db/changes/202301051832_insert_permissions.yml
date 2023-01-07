@@ -6,40 +6,40 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name: Permission_id
+                  name: id
                   valueSequenceNext: permission_id_seq
               - column:
-                  name: Permission_name
+                  name: name
                   value: user
             schemaName: public
             tableName: PERMISSION
         - insert:
             columns:
               - column:
-                  name: Permission_id
+                  name: id
                   valueSequenceNext: permission_id_seq
               - column:
-                  name: Permission_name
+                  name: name
                   value: admin
             schemaName: public
             tableName: PERMISSION
         - insert:
             columns:
               - column:
-                  name: Permission_id
+                  name: id
                   valueSequenceNext: permission_id_seq
               - column:
-                  name: Permission_name
+                  name: name
                   value: processing
             schemaName: public
             tableName: PERMISSION
         - insert:
             columns:
               - column:
-                  name: Permission_id
+                  name: id
                   valueSequenceNext: permission_id_seq
               - column:
-                  name: Permission_name
+                  name: name
                   value: backup
             schemaName: public
             tableName: PERMISSION

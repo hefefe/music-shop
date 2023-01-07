@@ -7,56 +7,64 @@ databaseChangeLog:
             tableName: CUSTOMER
             columns:
               - column:
-                  name: Customer_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: CUSTOMER_ID_PK
                     nullable: false
               - column:
-                  name: Customer_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Customer_surname
+                  name: surname
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Customer_login
+                  name: login
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Customer_password
+                  name: password
                   type: varchar(512)
                   constraints:
                     nullable: false
               - column:
-                  name: Customer_isactive
+                  name: isactive
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: Customer_nip
+                  name: nip
                   type: varchar(10)
               - column:
-                  name: Customer_type
+                  name: type
                   type: varchar(50)
               - column:
-                  name: Contact_id
+                  name: contact_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_contact_customer
                     referencedTableName: CONTACT
-                    referencedColumnNames: Contact_id
+                    referencedColumnNames: id
               - column:
-                  name: Adress_id
+                  name: adress_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_adress_customer
                     referencedTableName: ADRESS
-                    referencedColumnNames: Adress_id
+                    referencedColumnNames: id
+              - column:
+                  name: permission_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_permission_user
+                    referencedTableName: PERMISSION
+                    referencedColumnNames: id

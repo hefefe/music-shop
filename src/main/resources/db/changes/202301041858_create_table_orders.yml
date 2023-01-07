@@ -1,44 +1,44 @@
 databaseChangeLog:
   - changeSet:
-      id: create_table_order
+      id: create_table_orders
       author: mwitczak
       changes:
         - createTable:
-            tableName: ORDER
+            tableName: ORDERS
             columns:
               - column:
-                  name: Order_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
-                    primarykeyname: ORDER_ID_PK
+                    primarykeyname: ORDERS_ID_PK
                     nullable: false
               - column:
-                  name: Order_date
+                  name: date
                   type: datetime
                   constraints:
                     nullable: false
               - column:
-                  name: Employee_id
+                  name: employee_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_employee_order
                     referencedTableName: EMPLOYEE
-                    referencedColumnNames: Employee_id
+                    referencedColumnNames: id
               - column:
-                  name: Customer_id
+                  name: customer_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_customer_order
                     referencedTableName: CUSTOMER
-                    referencedColumnNames: Customer_id
+                    referencedColumnNames: id
               - column:
-                  name: Order_status_id
+                  name: order_status_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_OrderStatusId_order
+                    foreignKeyName: fk_order_status_id_order
                     referencedTableName: ORDER_STATUS
-                    referencedColumnNames: Order_status_id
+                    referencedColumnNames: id

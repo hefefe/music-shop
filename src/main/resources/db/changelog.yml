@@ -24,7 +24,7 @@ databaseChangeLog:
       file: changes/202301041819_create_table_order_status.yml
       relativeToChangelogFile: true
   - include:
-      file: changes/202301041858_create_table_order.yml
+      file: changes/202301041858_create_table_orders.yml
       relativeToChangelogFile: true
   - include:
       file: changes/202301041913_create_table_payment_method.yml
@@ -54,13 +54,7 @@ databaseChangeLog:
       file: changes/202301051217_create_table_order_elements.yml
       relativeToChangelogFile: true
   - include:
-      file: changes/202301051400_add_column_customer_permission.yml
-      relativeToChangelogFile: true
-  - include:
       file: changes/202301051832_insert_permissions.yml
-      relativeToChangelogFile: true
-  - include:
-      file: changes/202301051953_add_image_column_to_product_table.yml
       relativeToChangelogFile: true
   - include:
       file: changes/202301052031_insert_order_status.yml

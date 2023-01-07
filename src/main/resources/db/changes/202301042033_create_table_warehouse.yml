@@ -7,22 +7,22 @@ databaseChangeLog:
             tableName: WAREHOUSE
             columns:
               - column:
-                  name: Warehouse_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: WAREHOUSE_ID_PK
                     nullable: false
               - column:
-                  name: Warehouse_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Adress_id
+                  name: adress_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_adress_warehouse
                     referencedTableName: ADRESS
-                    referencedColumnNames: Adress_id
+                    referencedColumnNames: id

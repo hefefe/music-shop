@@ -7,14 +7,14 @@ databaseChangeLog:
             tableName: PRODUCT_TYPE
             columns:
               - column:
-                  name: Product_type_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: PRODUCT_TYPE_ID_PK
                     nullable: false
               - column:
-                  name: Product_type_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false

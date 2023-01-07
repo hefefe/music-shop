@@ -6,13 +6,13 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name:  Warehouse_id
+                  name:  id
                   valueSequenceNext: warehouse_id_seq
               - column:
-                  name: Warehouse_name
+                  name: name
                   value: 'Warehouse in koszalin'
               - column:
-                  name: Adress_id
+                  name: adress_id
                   value: 1
             schemaName: public
             tableName: WAREHOUSE

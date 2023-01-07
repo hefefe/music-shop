@@ -6,70 +6,70 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: accepted
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: 'in realisation'
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: sent
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: recieved
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: completed
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: refunded
             schemaName: public
             tableName: ORDER_STATUS
         - insert:
             columns:
               - column:
-                  name: Order_status_id
+                  name: id
                   valueSequenceNext: order_status_id_seq
               - column:
-                  name: Order_status_name
+                  name: name
                   value: cancelled
             schemaName: public
             tableName: ORDER_STATUS

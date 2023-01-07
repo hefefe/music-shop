@@ -7,52 +7,52 @@ databaseChangeLog:
             tableName: EMPLOYEE
             columns:
               - column:
-                  name: Employee_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: EMPLOYEE_ID_PK
                     nullable: false
               - column:
-                  name: Employee_name
+                  name: name
                   type: varchar(50)
               - column:
-                  name: Employee_surname
+                  name: surname
                   type: varchar(50)
               - column:
-                  name: Employee_login
+                  name: login
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Employee_password
+                  name: password
                   type: varchar(512)
                   constraints:
                     nullable: false
               - column:
-                  name: Employee_isactive
+                  name: isactive
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: Permission_id
+                  name: permission_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_permission_employee
                     referencedTableName: PERMISSION
-                    referencedColumnNames: Permission_id
+                    referencedColumnNames: id
               - column:
-                  name: Contact_id
+                  name: contact_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk_contact_employee
                     referencedTableName: CONTACT
-                    referencedColumnNames: Contact_id
+                    referencedColumnNames: id
               - column:
-                  name: Adress_id
+                  name: adress_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk_adress_employee
                     referencedTableName: ADRESS
-                    referencedColumnNames: Adress_id
+                    referencedColumnNames: id

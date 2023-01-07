@@ -6,40 +6,40 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name: Artist_id
+                  name: id
                   valueSequenceNext: artist_id_seq
               - column:
-                  name: Artist_name
+                  name: name
                   value: queen
             schemaName: public
             tableName: ARTIST
         - insert:
             columns:
               - column:
-                  name: Artist_id
+                  name: id
                   valueSequenceNext: artist_id_seq
               - column:
-                  name: Artist_name
+                  name: name
                   value: ac/dc
             schemaName: public
             tableName: ARTIST
         - insert:
             columns:
               - column:
-                  name: Artist_id
+                  name: id
                   valueSequenceNext: artist_id_seq
               - column:
-                  name: Artist_name
+                  name: name
                   value: static-x
             schemaName: public
             tableName: ARTIST
         - insert:
             columns:
               - column:
-                  name: Artist_id
+                  name: id
                   valueSequenceNext: artist_id_seq
               - column:
-                  name: Artist_name
+                  name: name
                   value: abba
             schemaName: public
             tableName: ARTIST

@@ -7,53 +7,53 @@ databaseChangeLog:
             tableName: PAYMENT
             columns:
               - column:
-                  name: Payment_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: PAYMENT_ID_PK
                     nullable: false
               - column:
-                  name: Order_date
-                  type: varchar(50)
+                  name: date
+                  type: datetime
                   constraints:
                     nullable: false
               - column:
-                  name: Payment_gross_price
+                  name: gross_price
                   type: decimal(100,2)
                   constraints:
                     nullable: false
               - column:
-                  name: Payment_net_price
+                  name: net_price
                   type: decimal(100,2)
                   constraints:
                     nullable: false
               - column:
-                  name: Payment_is_paids
+                  name: is_paid
                   type: boolean
                   constraints:
                     nullable: false
               - column:
-                  name: Payment_bank_account_number
+                  name: bank_account_number
                   type: varchar(50)
               - column:
-                  name: Payment_tax
+                  name: tax
                   type: integer
                   constraints:
                     nullable: false
               - column:
-                  name: Order_id
+                  name: order_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_order_payment
-                    referencedTableName: ORDER
-                    referencedColumnNames: Order_id
+                    foreignKeyName: fk_orders_payment
+                    referencedTableName: ORDERS
+                    referencedColumnNames: id
               - column:
-                  name: Payment_method_id
+                  name: payment_method_id
                   type: bigint
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_paymentMethod_payment
+                    foreignKeyName: fk_payment_,ethod_payment
                     referencedTableName: PAYMENT_METHOD
-                    referencedColumnNames: Payment_method_id
+                    referencedColumnNames: id

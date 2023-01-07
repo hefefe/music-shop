@@ -6,50 +6,50 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name:  Payment_method_id
+                  name:  id
                   valueSequenceNext: payment_method_id_seq
               - column:
-                  name: Payment_method_name
+                  name: name
                   value: cash
             schemaName: public
             tableName: PAYMENT_METHOD
         - insert:
             columns:
               - column:
-                  name: Payment_method_id
+                  name: id
                   valueSequenceNext: payment_method_id_seq
               - column:
-                  name: Payment_method_name
+                  name: name
                   value: transfer
             schemaName: public
             tableName: PAYMENT_METHOD
         - insert:
             columns:
               - column:
-                  name: Payment_method_id
+                  name: id
                   valueSequenceNext: payment_method_id_seq
               - column:
-                  name: Payment_method_name
+                  name: name
                   value: paypal
             schemaName: public
             tableName: PAYMENT_METHOD
         - insert:
             columns:
               - column:
-                  name: Payment_method_id
+                  name: id
                   valueSequenceNext: payment_method_id_seq
               - column:
-                  name: Payment_method_name
+                  name: name
                   value: 'credit card'
             schemaName: public
             tableName: PAYMENT_METHOD
         - insert:
             columns:
               - column:
-                  name: Payment_method_id
+                  name: id
                   valueSequenceNext: payment_method_id_seq
               - column:
-                  name: Payment_method_name
+                  name: name
                   value: cryptocurrency
             schemaName: public
             tableName: PAYMENT_METHOD

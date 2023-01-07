@@ -7,60 +7,63 @@ databaseChangeLog:
             tableName: PRODUCT
             columns:
               - column:
-                  name: Product_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: PRODUCT_ID_PK
                     nullable: false
               - column:
-                  name: Product_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Product_gross_price
+                  name: gross_price
                   type: decimal(100,2)
                   constraints:
                     nullable: false
               - column:
-                  name: Product_net_price
+                  name: net_price
                   type: decimal(100,2)
                   constraints:
                     nullable: false
               - column:
-                  name: Product_tax
+                  name: tax
                   type: integer
                   constraints:
                     nullable: false
               - column:
-                  name: Artist_id
+                  name: image_path
+                  type: varchar(512)
+              - column:
+                  name: artist_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_artist_product
                     referencedTableName: ARTIST
-                    referencedColumnNames: Artist_id
+                    referencedColumnNames: id
               - column:
-                  name: Genre_id
+                  name: genre_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_genre_product
                     referencedTableName: GENRE
-                    referencedColumnNames: Genre_id
+                    referencedColumnNames: id
               - column:
-                  name: Product_type_id
+                  name: product_type_id
                   type: bigint
                   constraints:
                     nullable: false
                     foreignKeyName: fk_productType_product
                     referencedTableName: PRODUCT_TYPE
-                    referencedColumnNames: Product_type_id
+                    referencedColumnNames: id
               - column:
-                  name: Warehouse_state_id
+                  name: warehouse_state_id
                   type: bigint
                   constraints:
                     foreignKeyName: fk_WarehouseState_product
                     referencedTableName: WAREHOUSE_STATE
-                    referencedColumnNames: Warehouse_state_id
+                    referencedColumnNames: id

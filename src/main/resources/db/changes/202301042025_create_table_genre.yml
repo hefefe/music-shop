@@ -7,14 +7,14 @@ databaseChangeLog:
             tableName: GENRE
             columns:
               - column:
-                  name: Genre_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: GENRE_ID_PK
                     nullable: false
               - column:
-                  name: Genre_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false

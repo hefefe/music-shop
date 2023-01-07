@@ -7,12 +7,12 @@ databaseChangeLog:
             tableName: PERMISSION
             columns:
               - column:
-                  name: Permission_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: PERMISSION_ID_PK
                     nullable: false
               - column:
-                  name: Permission_name
+                  name: name
                   type: varchar(50)

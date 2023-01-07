@@ -6,40 +6,40 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name:  Product_type_id
+                  name:  id
                   valueSequenceNext:  product_type_id_seq
               - column:
-                  name: Product_type_name
+                  name: name
                   value: cd
             schemaName: public
             tableName: PRODUCT_TYPE
         - insert:
             columns:
               - column:
-                  name: Product_type_id
+                  name: id
                   valueSequenceNext: product_type_id_seq
               - column:
-                  name: Product_type_name
+                  name: name
                   value: casette
             schemaName: public
             tableName: PRODUCT_TYPE
         - insert:
             columns:
               - column:
-                  name: Product_type_id
+                  name: id
                   valueSequenceNext: product_type_id_seq
               - column:
-                  name: Product_type_name
+                  name: name
                   value: vinyl
             schemaName: public
             tableName: PRODUCT_TYPE
         - insert:
             columns:
               - column:
-                  name: Product_type_id
+                  name: id
                   valueSequenceNext: product_type_id_seq
               - column:
-                  name: Product_type_name
+                  name: name
                   value: digital
             schemaName: public
             tableName: PRODUCT_TYPE

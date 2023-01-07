@@ -6,30 +6,30 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name: Genre_id
+                  name: id
                   valueSequenceNext: genre_id_seq
               - column:
-                  name: Genre_name
+                  name: name
                   value: rock
             schemaName: public
             tableName: GENRE
         - insert:
             columns:
               - column:
-                  name: Genre_id
+                  name: id
                   valueSequenceNext: genre_id_seq
               - column:
-                  name: Genre_name
+                  name: name
                   value: metal
             schemaName: public
             tableName: GENRE
         - insert:
             columns:
               - column:
-                  name: Genre_id
+                  name: id
                   valueSequenceNext: genre_id_seq
               - column:
-                  name: Genre_name
+                  name: name
                   value: pop
             schemaName: public
             tableName: GENRE

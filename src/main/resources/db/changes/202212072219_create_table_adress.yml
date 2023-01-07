@@ -7,35 +7,35 @@ databaseChangeLog:
             tableName: ADRESS
             columns:
               - column:
-                  name: Adress_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: ADRESS_ID_PK
                     nullable: false
               - column:
-                  name: Adress_locality
+                  name: locality
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Adress_state
+                  name: state
                   type: varchar(50)
                   constraints:
                     nullable: false
               - column:
-                  name: Adress_zipcode
+                  name: zipcode
                   type: varchar(5)
                   constraints:
                     nullable: false
               - column:
-                  name: Adress_street
+                  name: street
                   type: varchar(50)
               - column:
-                  name: Adress_number
+                  name: number
                   type: varchar(10)
                   constraints:
                     nullable: false
               - column:
-                  name: Adress_apartment_number
+                  name: apartment_number
                   type: varchar(10)

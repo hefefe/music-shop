@@ -6,22 +6,22 @@ databaseChangeLog:
         - insert:
             columns:
               - column:
-                  name:  Adress_id
+                  name:  id
                   valueSequenceNext: adress_id_seq
               - column:
-                  name: Adress_locality
+                  name: locality
                   value: Koszalin
               - column:
-                  name: Adress_state
+                  name: state
                   value: Zachodniopomorskie
               - column:
-                  name: Adress_zipcode
+                  name: zipcode
                   value: 75432
               - column:
-                  name: Adress_street
+                  name: street
                   value: 'Jana Pawła II'
               - column:
-                  name: Adress_number
+                  name: number
                   value: 2137
             schemaName: public
             tableName: ADRESS

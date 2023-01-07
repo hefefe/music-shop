@@ -7,14 +7,14 @@ databaseChangeLog:
             tableName: ARTIST
             columns:
               - column:
-                  name: Artist_id
+                  name: id
                   type: bigint
                   constraints:
                     primaryKey: true
                     primarykeyname: ARTIST_ID_PK
                     nullable: false
               - column:
-                  name: Artist_name
+                  name: name
                   type: varchar(50)
                   constraints:
                     nullable: false
