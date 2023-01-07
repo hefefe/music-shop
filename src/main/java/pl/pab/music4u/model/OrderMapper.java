@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.OrderEntity;
 @Mapper(componentModel = "spring")
 public interface OrderMapper {
 
-    OrderMapper INSTANCE = Mappers.getMapper(OrderMapper.class);
 
     OrderEntity dtoToEntity(OrderDTO orderDTO);
     OrderDTO entityToDTO(OrderEntity orderEntity);

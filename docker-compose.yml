@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: app/Dockerfile
+    restart: always
     ports:
       - '8080:8080'
     network_mode: "host"

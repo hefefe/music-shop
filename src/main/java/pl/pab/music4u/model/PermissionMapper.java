@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.PermissionEntity;
 @Mapper(componentModel = "spring")
 public interface PermissionMapper {
 
-    PermissionMapper INSTANCE = Mappers.getMapper(PermissionMapper.class);
 
     PermissionEntity dtoToEntity(PermissionDTO permissionDTO);
     PermissionDTO entityToDTO(PermissionEntity permissionEntity);

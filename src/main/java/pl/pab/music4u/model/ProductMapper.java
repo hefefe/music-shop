@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.ProductEntity;
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
 
-    ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
 
     ProductEntity dtoToEntity(ProductDTO productDTO);
     ProductDTO entityToDTO(ProductEntity productEntity);

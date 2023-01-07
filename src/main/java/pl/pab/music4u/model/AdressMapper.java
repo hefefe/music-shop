@@ -6,7 +6,6 @@ import pl.pab.music4u.entity.AdressEntity;
 
 @Mapper(componentModel = "spring")
 public interface AdressMapper {
-    AdressMapper INSTANCE = Mappers.getMapper(AdressMapper.class);
 
     AdressEntity dtoToEntity(AdressDTO adressDTO);
     AdressDTO entityToDTO(AdressEntity adressEntity);

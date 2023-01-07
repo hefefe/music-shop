@@ -4,8 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import pl.pab.music4u.entity.OrderEntity;
+import pl.pab.music4u.entity.ProductEntity;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -16,4 +20,6 @@ public class OrderElementsDTO {
     private Integer itemAmount;
     private String remark;
     private Integer discount;
+    private int orderId;
+    private int productId;
 }

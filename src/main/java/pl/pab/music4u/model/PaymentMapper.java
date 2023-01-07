@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.PaymentEntity;
 @Mapper(componentModel = "spring")
 public interface PaymentMapper {
 
-    PaymentMapper INSTANCE = Mappers.getMapper(PaymentMapper.class);
 
     PaymentEntity dtoToEntity(PaymentDTO paymentDTO);
     PaymentDTO entityToDTO(PaymentEntity paymentEntity);

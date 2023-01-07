@@ -4,8 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import pl.pab.music4u.entity.OrderEntity;
+import pl.pab.music4u.entity.PaymentMethodEntity;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
@@ -21,4 +25,6 @@ public class PaymentDTO {
     private boolean isPaid;
     private String bankAccountNumber;
     private Integer tax;
+    private int paymentMethodId;
+    private int orderId;
 }

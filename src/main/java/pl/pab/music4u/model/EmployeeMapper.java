@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.EmployeeEntity;
 @Mapper(componentModel = "spring")
 public interface EmployeeMapper {
 
-    EmployeeMapper INSTANCE = Mappers.getMapper(EmployeeMapper.class);
 
     EmployeeEntity dtoToEntity(EmployeeDTO employeeDTO);
     EmployeeDTO entityToDTO(EmployeeEntity employeeEntity);

@@ -7,7 +7,6 @@ import pl.pab.music4u.entity.WarehouseEntity;
 @Mapper(componentModel = "spring")
 public interface WarehouseMapper {
 
-    WarehouseMapper INSTANCE = Mappers.getMapper(WarehouseMapper.class);
 
     WarehouseEntity dtoToEntity(WarehouseDTO warehouseDTO);
     WarehouseDTO entityToDTO(WarehouseEntity warehouseEntity);
