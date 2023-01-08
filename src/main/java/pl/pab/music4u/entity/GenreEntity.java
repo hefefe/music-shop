@@ -1,9 +1,6 @@
 package pl.pab.music4u.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -14,6 +11,7 @@ import java.util.Set;
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "GENRE")
 @SequenceGenerator(name = "generator_seq",
         sequenceName = "genre_id_seq",
