@@ -53,8 +53,8 @@
             <th scope="row" th:text="${iStat.index + 1}">1</th>
             <td th:text="${genre.name}">Larry</td>
 
-            <td><a  class="btn btn-danger">Delete</a></td>
-            <td><a class="btn btn-warning">Update</a></td>
+            <td><a th:href="@{/admin/genres/delete/{id} (id=${genre.id})}" class="btn btn-danger">Delete</a></td>
+            <td><a th:href="@{/admin/genres/update/{id} (id=${genre.id})}" class="btn btn-warning">Update</a></td>
         </tr>
         </tbody>
     </table>

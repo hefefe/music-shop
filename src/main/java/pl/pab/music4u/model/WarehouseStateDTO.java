@@ -16,5 +16,4 @@ public class WarehouseStateDTO {
     private Long id;
     private Integer amount;
     private boolean status;
-    private int warehouseId;
 }

@@ -19,7 +19,10 @@ import java.util.Set;
         sequenceName = "order_status_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class OrderStatusEntity extends BaseEntity{
+public class OrderStatusEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(length = 50, nullable = false)
     private String name;
     //pk def

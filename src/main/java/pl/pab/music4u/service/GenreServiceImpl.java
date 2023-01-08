@@ -8,6 +8,7 @@ import pl.pab.music4u.model.GenreDTO;
 import pl.pab.music4u.model.GenreMapper;
 import pl.pab.music4u.repository.GenreRepository;
 
+import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,8 +29,9 @@ public class GenreServiceImpl implements GenreService{
     }
 
     @Override
-    public GenreDTO updateGenre(Long id, GenreDTO denreDTO) {
-        return null;
+    public GenreDTO updateGenre(GenreDTO genreDTO) {
+        GenreEntity genreEntity = genreRepository.save(genreMapper.dtoToEntity(genreDTO));
+        return genreMapper.entityToDTO(genreEntity);
     }
 
     @Override

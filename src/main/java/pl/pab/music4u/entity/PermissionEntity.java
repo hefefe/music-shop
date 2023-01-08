@@ -16,7 +16,10 @@ import java.util.Set;
         sequenceName = "permission_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class PermissionEntity extends BaseEntity{
+public class PermissionEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(length = 50, nullable = false)
     private String name;
     //pk def

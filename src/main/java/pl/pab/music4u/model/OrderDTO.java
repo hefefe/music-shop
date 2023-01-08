@@ -19,7 +19,4 @@ import java.sql.Timestamp;
 public class OrderDTO {
     private Long id;
     private Timestamp date;
-    private int orderStatusId;
-    private int customerId;
-    private int employeeId;
 }

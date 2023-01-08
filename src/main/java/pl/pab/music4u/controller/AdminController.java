@@ -10,6 +10,8 @@ import pl.pab.music4u.entity.GenreEntity;
 import pl.pab.music4u.model.GenreDTO;
 import pl.pab.music4u.service.GenreService;
 
+import java.util.Optional;
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/admin")
@@ -36,14 +38,25 @@ public class AdminController {
         genreService.addGenre(genreDTO);
         return "redirect:/admin/genres";
     }
+    @PutMapping("/genres/update")
+    public String putCategoriesUpdate(@ModelAttribute("genre") GenreDTO genreDTO){
+        genreService.updateGenre(genreDTO);
+        return "redirect:/admin/genres";
+    }
     @GetMapping("/datatest")
     public String getDataTest(Model model){
         model.addAttribute("genres", genreService.getAllGenres());
         return "datatest";
     }
     @GetMapping("/genres/delete/{id}")
-    public String getCategoriesDelete(Long id){
+    public String getCategoriesDelete(@PathVariable("id") Long id){
         genreService.deleteGenre(id);
         return "redirect:/admin/genres";
     }
-}
+    @GetMapping("/genres/update/{id}")
+    public String getCategoriesUpdate(@PathVariable("id") Long id, Model model){
+            model.addAttribute("genre", genreService.getGenreById(id));
+            return "genresUpdate";
+        }
+    }
+

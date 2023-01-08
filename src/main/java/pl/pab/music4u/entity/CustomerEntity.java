@@ -17,7 +17,10 @@ import java.util.Set;
         sequenceName = "customer_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class CustomerEntity extends BaseEntity{
+public class CustomerEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(length = 50, nullable = false)
     private String name;
     @Column(length = 50, nullable = false)
@@ -47,6 +50,4 @@ public class CustomerEntity extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "permission_id", referencedColumnName = "id")
     private PermissionEntity permissionEntity;
-
-
 }

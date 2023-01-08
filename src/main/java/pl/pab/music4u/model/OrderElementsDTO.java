@@ -20,6 +20,4 @@ public class OrderElementsDTO {
     private Integer itemAmount;
     private String remark;
     private Integer discount;
-    private int orderId;
-    private int productId;
 }

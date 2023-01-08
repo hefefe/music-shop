@@ -8,7 +8,7 @@ import java.util.List;
 public interface GenreService {
     List<GenreDTO> getAllGenres();
     GenreDTO addGenre(GenreDTO genreDTO);
-    GenreDTO updateGenre(Long id, GenreDTO denreDTO);
+    GenreDTO updateGenre(GenreDTO genreDTO);
     GenreDTO getGenreById(Long id);
     void deleteGenre(Long id);
 }

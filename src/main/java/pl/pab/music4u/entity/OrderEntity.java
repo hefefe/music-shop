@@ -21,8 +21,10 @@ import java.util.Set;
     sequenceName = "order_id_seq",
     allocationSize = 1,
     initialValue = 1)
-public class OrderEntity extends BaseEntity{
-
+public class OrderEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column( nullable = false)
     private Timestamp date;
     //pk def

@@ -21,3 +21,7 @@ spring:
     suffix: .html
     mode: HTML5
     prefix: classpath:/templates/
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

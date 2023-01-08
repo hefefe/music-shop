@@ -20,7 +20,10 @@ import java.time.LocalDateTime;
         sequenceName = "payment_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class PaymentEntity extends BaseEntity{
+public class PaymentEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(nullable = false)
     private Timestamp date;
     @Column(precision=100, scale=2, nullable = false)

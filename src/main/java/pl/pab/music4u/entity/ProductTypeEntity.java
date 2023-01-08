@@ -19,7 +19,10 @@ import java.util.Set;
         sequenceName = "product_type_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class ProductTypeEntity extends BaseEntity{
+public class ProductTypeEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(length = 50, nullable = false)
     private String name;
     //pk def

@@ -18,7 +18,10 @@ import java.util.Set;
         sequenceName = "adress_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class AdressEntity extends BaseEntity{
+public class AdressEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(length = 50, nullable = false)
     private String locality;
     @Column(length = 50, nullable = false)

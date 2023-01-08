@@ -19,7 +19,10 @@ import java.util.Set;
         sequenceName = "contact_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class ContactEntity extends BaseEntity{
+public class ContactEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column( length = 20)
     private String phone;
     @Column(length = 50)

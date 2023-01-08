@@ -19,7 +19,10 @@ import java.util.Set;
         sequenceName = "warehouse_state_id_seq",
         allocationSize = 1,
         initialValue = 1)
-public class WarehouseStateEntity extends BaseEntity{
+public class WarehouseStateEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_seq")
+    private Long id;
     @Column(nullable = false)
     private Integer amount;
     @Column(nullable = false)
