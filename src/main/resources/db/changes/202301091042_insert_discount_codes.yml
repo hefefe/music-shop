@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_product_type
+      author: mwitczak
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name:  id
+                  valueSequenceNext:  discount_codes_id_seq
+              - column:
+                  name: name
+                  value: FALL2023
+              - column:
+                  name: value
+                  value: 10
+            schemaName: public
+            tableName: DISCOUNT_CODES
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: discount_codes_id_seq
+              - column:
+                  name: name
+                  value: BLKFRDY
+              - column:
+                  name: value
+                  value: 25
+            schemaName: public
+            tableName: DISCOUNT_CODES
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  valueSequenceNext: discount_codes_id_seq
+              - column:
+                  name: name
+                  value: MAKEITRAIN
+              - column:
+                  name: value
+                  value: 95
+            schemaName: public
+            tableName: DISCOUNT_CODES

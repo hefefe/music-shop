@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id:  drop_discount_from_order_elements
+      author:  mwitczak
+      changes:
+        -  dropColumn:
+             columns:
+               -  column:
+                    name:  discount
+             schemaName:  public
+             tableName:  ORDER_ELEMENTS

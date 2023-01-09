@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_column_discount_to_order_elements
+      author: mwitczak
+      changes:
+        - addColumn:
+            tableName: ORDER_ELEMENTS
+            columns:
+              - column:
+                  name: discount_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_discount_codes_order_elements
+                    referencedTableName: DISCOUNT_CODES
+                    referencedColumnNames: id
