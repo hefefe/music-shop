@@ -16,47 +16,10 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RequestMapping("/admin")
 public class AdminController {
-    @Autowired
-    private final GenreService genreService;
 
     @GetMapping("/home")
     public String getAdminHome(){
         return "adminHome";
     }
-    @GetMapping("/genres")
-    public String getCategories(Model model){
-        model.addAttribute("genres", genreService.getAllGenres());
-        return "genres";
-    }
-    @GetMapping("/genres/add")
-    public String getCategoriesAdd(Model model){
-        model.addAttribute("genre", new GenreEntity());
-        return "genresAdd";
-    }
-    @PostMapping("/genres/add")
-    public String postCategoriesAdd(@ModelAttribute("genre") GenreDTO genreDTO){
-        genreService.addGenre(genreDTO);
-        return "redirect:/admin/genres";
-    }
-    @PutMapping("/genres/update")
-    public String putCategoriesUpdate(@ModelAttribute("genre") GenreDTO genreDTO){
-        genreService.updateGenre(genreDTO);
-        return "redirect:/admin/genres";
-    }
-    @GetMapping("/datatest")
-    public String getDataTest(Model model){
-        model.addAttribute("genres", genreService.getAllGenres());
-        return "datatest";
-    }
-    @GetMapping("/genres/delete/{id}")
-    public String getCategoriesDelete(@PathVariable("id") Long id){
-        genreService.deleteGenre(id);
-        return "redirect:/admin/genres";
-    }
-    @GetMapping("/genres/update/{id}")
-    public String getCategoriesUpdate(@PathVariable("id") Long id, Model model){
-            model.addAttribute("genre", genreService.getGenreById(id));
-            return "genresUpdate";
-        }
-    }
+}
 

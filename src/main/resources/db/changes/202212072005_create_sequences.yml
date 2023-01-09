@@ -111,3 +111,10 @@ databaseChangeLog:
         - createSequence:
             sequenceName: order_elements_id_seq
             startValue: 1
+  - changeSet:
+      id: create_sequence_discount_codes_id_seq
+      author: mwitczak
+      changes:
+        - createSequence:
+            sequenceName: discount_codes_id_seq
+            startValue: 1

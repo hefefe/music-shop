@@ -77,3 +77,15 @@ databaseChangeLog:
   - include:
       file: changes/202301052131_insert_warehouse.yml
       relativeToChangelogFile: true
+  - include:
+      file: changes/202301091030_create_table_discount_codes.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301091033_add_column_discount_id_to_order_elements.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301091039_drop_discount_from_order_elements.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/202301091042_insert_discount_codes.yml
+      relativeToChangelogFile: true

@@ -25,8 +25,6 @@ public class OrderElementsEntity{
     private Integer itemAmount;
     @Column(nullable = false)
     private String remark;
-    @Column(nullable = false)
-    private Integer discount;
     //pk def
     //fk def
     @ManyToOne
@@ -35,6 +33,9 @@ public class OrderElementsEntity{
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private ProductEntity productEntity;
+    @ManyToOne
+    @JoinColumn(name = "discount_id", referencedColumnName = "id")
+    private DiscountCodesEntity discountCodesEntity;
 
 
 
