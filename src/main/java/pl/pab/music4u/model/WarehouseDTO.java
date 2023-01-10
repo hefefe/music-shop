@@ -13,4 +13,5 @@ import pl.pab.music4u.entity.AdressEntity;
 public class WarehouseDTO {
     private Long id;
     private String name;
+    private Long adressId;
 }

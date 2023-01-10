@@ -11,4 +11,6 @@ public interface GenreService {
     GenreDTO updateGenre(GenreDTO genreDTO);
     GenreDTO getGenreById(Long id);
     void deleteGenre(Long id);
+    GenreEntity findById(Long id);
+    Long map(GenreEntity genreEntity);
 }

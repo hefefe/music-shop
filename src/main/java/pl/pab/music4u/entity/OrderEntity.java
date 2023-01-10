@@ -1,9 +1,6 @@
 package pl.pab.music4u.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -16,6 +13,7 @@ import java.util.Set;
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "ORDERS")
 @SequenceGenerator(name = "generator_seq",
     sequenceName = "order_id_seq",

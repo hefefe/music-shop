@@ -11,6 +11,7 @@ import java.util.Set;
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "PERMISSION")
 @SequenceGenerator(name = "generator_seq",
         sequenceName = "permission_id_seq",

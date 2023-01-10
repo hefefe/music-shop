@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 import pl.pab.music4u.entity.GenreEntity;
 import pl.pab.music4u.exception.GenreNotFoundException;
 import pl.pab.music4u.model.GenreDTO;
-import pl.pab.music4u.model.GenreMapper;
+import pl.pab.music4u.mapper.GenreMapper;
 import pl.pab.music4u.repository.GenreRepository;
+import pl.pab.music4u.repository.ProductRepository;
 
-import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,7 +41,19 @@ public class GenreServiceImpl implements GenreService{
 
     @Override
     public void deleteGenre(Long id) {
+
         genreRepository.deleteById(id);
+    }
+
+    //mapstruct specific
+    @Override
+    public GenreEntity findById(Long id) {
+        return genreRepository.findById(id).orElseThrow(GenreNotFoundException::new);
+    }
+
+    @Override
+    public Long map(GenreEntity genreEntity) {
+        return genreEntity.getId();
     }
 
 }

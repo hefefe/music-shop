@@ -23,4 +23,7 @@ public class EmployeeDTO {
     private String login;
     private String password;
     private boolean isactive;
+    private Long contactId;
+    private Long adressId;
+    private Long permissionId;
 }

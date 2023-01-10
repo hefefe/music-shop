@@ -1,9 +1,6 @@
 package pl.pab.music4u.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -16,6 +13,7 @@ import java.util.Set;
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "PRODUCT")
 @SequenceGenerator(name = "generator_seq",
         sequenceName = "product_id_seq",

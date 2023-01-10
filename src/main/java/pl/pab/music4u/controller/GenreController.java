@@ -41,11 +41,11 @@ public class GenreController {
         model.addAttribute("genres", genreService.getAllGenres());
         return "datatest";
     }
-    @GetMapping("/genres/delete/{id}")
-    public String getCategoriesDelete(@PathVariable("id") Long id){
-        genreService.deleteGenre(id);
-        return "redirect:/admin/genres";
-    }
+//    @GetMapping("/genres/delete/{id}")
+//    public String getCategoriesDelete(@PathVariable("id") Long id){
+//        genreService.deleteGenre(id);
+//        return "redirect:/admin/genres";
+//    }
     @GetMapping("/genres/update/{id}")
     public String getCategoriesUpdate(@PathVariable("id") Long id, Model model){
         model.addAttribute("genre", genreService.getGenreById(id));

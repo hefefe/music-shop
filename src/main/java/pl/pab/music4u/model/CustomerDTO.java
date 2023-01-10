@@ -25,4 +25,7 @@ public class CustomerDTO {
     private String nip;
     private String type;
     private boolean isactive;
+    private Long contactId;
+    private Long adressId;
+    private Long permissionId;
 }

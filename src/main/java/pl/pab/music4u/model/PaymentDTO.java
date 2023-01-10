@@ -25,4 +25,6 @@ public class PaymentDTO {
     private boolean isPaid;
     private String bankAccountNumber;
     private Integer tax;
+    private Long paymentMethodId;
+    private Long orderId;
 }

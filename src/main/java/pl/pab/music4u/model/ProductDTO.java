@@ -25,4 +25,8 @@ public class ProductDTO {
     private BigDecimal netPrice;
     private Integer tax;
     private String imagePath;
+    private Long genreId;
+    private Long artistId;
+    private Long productTypeId;
+    private Long warehouseStateId;
 }

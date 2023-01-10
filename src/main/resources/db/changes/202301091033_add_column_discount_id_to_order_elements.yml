@@ -10,7 +10,6 @@ databaseChangeLog:
                   name: discount_id
                   type: bigint
                   constraints:
-                    nullable: false
                     foreignKeyName: fk_discount_codes_order_elements
                     referencedTableName: DISCOUNT_CODES
                     referencedColumnNames: id

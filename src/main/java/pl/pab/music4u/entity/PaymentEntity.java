@@ -1,9 +1,6 @@
 package pl.pab.music4u.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "PAYMENT")
 @SequenceGenerator(name = "generator_seq",
         sequenceName = "payment_id_seq",
