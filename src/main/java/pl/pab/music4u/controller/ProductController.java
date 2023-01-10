@@ -1,27 +1,28 @@
 package pl.pab.music4u.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.pab.music4u.entity.ProductEntity;
-import pl.pab.music4u.mapper.ProductMapper;
-import pl.pab.music4u.model.ProductDTO;
-import pl.pab.music4u.repository.ProductRepository;
-import pl.pab.music4u.service.GenreService;
+import pl.pab.music4u.projection.Productprojection;
 import pl.pab.music4u.service.ProductService;
 
-import java.math.BigDecimal;
+import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/admin")
 @RequiredArgsConstructor
 public class ProductController {
+    @Autowired
     private final ProductService productService;
 
-    @GetMapping("/entitytodto/{id}")
-    public ProductDTO productToDTO(@PathVariable("id") Long id){
-        return productService.getProductById(id);
+    @GetMapping("/products")
+    public String getCategories(Model model){
+        model.addAttribute("products", productService.getListOfProducts());
+        return "products";
     }
+
 }

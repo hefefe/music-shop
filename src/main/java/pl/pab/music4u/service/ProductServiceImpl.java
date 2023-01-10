@@ -3,13 +3,14 @@ package pl.pab.music4u.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.pab.music4u.entity.ProductEntity;
-import pl.pab.music4u.exception.GenreNotFoundException;
 import pl.pab.music4u.exception.ProductNotFoundException;
 import pl.pab.music4u.model.ProductDTO;
 import pl.pab.music4u.mapper.ProductMapper;
+import pl.pab.music4u.projection.Productprojection;
 import pl.pab.music4u.repository.ProductRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,7 +20,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductDTO> getAllProducts() {
-        return null;
+        return productRepository.findAll().stream().map(productMapper::entityToDTO).collect(Collectors.toList());
     }
 
     @Override
@@ -50,5 +51,10 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public Long map(ProductEntity productEntity) {
         return productEntity.getId();
+    }
+
+    @Override
+    public List<Productprojection> getListOfProducts() {
+        return productRepository.getListOfProducts();
     }
 }
